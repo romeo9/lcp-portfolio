@@ -4,7 +4,7 @@ html{
 }
 
 .MuiTab-textColorPrimary {
-  color: white;
+  color: white !important;
 }
 
 .App {

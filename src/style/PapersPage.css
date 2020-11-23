@@ -1,0 +1,22 @@
+.papers-page-title {
+    text-align: center !important;
+    padding: 10px;
+    display: block;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.h2-papers-page-title {
+    display: inline;
+    
+}
+
+.span-line-left-paper {
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: rgb(78, 75, 75);
+    position: absolute;
+    left: 41%;
+}
+
