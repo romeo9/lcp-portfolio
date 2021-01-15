@@ -1,7 +1,6 @@
-import { Container, Grid, Icon } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
 import React from 'react'
 import Papers from './Paper'
-import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import "../style/PapersPage.css"
 
 class PapersPage extends React.Component {
@@ -10,7 +9,6 @@ class PapersPage extends React.Component {
      return(
          <Container>
              <div className="papers-page-title">
-                <DescriptionOutlinedIcon/>
                 <h1 className="h2-papers-page-title">Publications</h1>
              </div>
             <Grid container spacing={2}>

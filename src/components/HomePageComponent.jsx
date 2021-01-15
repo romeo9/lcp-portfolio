@@ -11,6 +11,7 @@ class HomePageComponent extends React.Component{
                         <Grid item xs={12}>
                             <Container>
                                 <h1>Hello, I'm Luigi</h1>
+                                <p>PhD in Plant Ecology</p>
                             </Container>
                         </Grid> 
                     </Grid>

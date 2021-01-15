@@ -5,6 +5,7 @@ import HomePageComponent from './components/HomePageComponent';
 import PapersPage from './components/PapersPage';
 import ContactsPage from './components/ContactsPage';
 import ResearchPage from './components/ResearchPage';
+import About from './components/About';
 
 export default function App(){
 
@@ -30,7 +31,7 @@ export default function App(){
                 <Tab className="tab-class" label="Contacts" value={4}/>
           </Tabs>
           {value !== undefined && value===0 && <HomePageComponent/>}
-          {value !== undefined && value===1 && <div>About Me</div>}
+          {value !== undefined && value===1 && <About/>}
           {value !== undefined && value===2 && <PapersPage/>}
           {value !== undefined && value===3 && <ResearchPage>Research</ResearchPage>}
           {value !== undefined && value===4 && <ContactsPage/>}

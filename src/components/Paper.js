@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { forwardRef, useEffect, useState } from "react"
 import sanityClient from "../client.js";
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, IconButton, makeStyles, Paper } from "@material-ui/core";
+import { OpenInNew } from '@material-ui/icons';
 import '../style/Paper.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +26,7 @@ export default function Papers() {
     sanityClient
       .fetch(
         `*[_type == "paper"]{
-            _id, title, year, abstract
+            _id, title, doi, year, abstract
         }`)
       .then((data) => {
         data.sort((a, b) => - (a.year - b.year)); //sort descending by year of publication
@@ -45,6 +46,9 @@ export default function Papers() {
                 </Grid>
                 <Grid key={'grid2'+i} item xs={4}>
                   <Paper key={'key2'+a._id} className={classes.paper}>{a.title}</Paper>
+                  <IconButton color="primary" aria-label="open doi" onClick={() => { a.doi ? window.open(a.doi, '_blank') : alert('Link not available'); }}>
+                    <OpenInNew fontSize='large'></OpenInNew>
+                  </IconButton>
                 </Grid>
                 <span className="span-line-left-paper"></span>
                 <Grid key={'grid3'+i} item xs={6}>
